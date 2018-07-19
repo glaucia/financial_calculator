@@ -1,0 +1,3 @@
+class FinancialCalculator < ApplicationRecord
+
+end

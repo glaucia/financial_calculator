@@ -1,0 +1,37 @@
+<div class="container">
+<div class="card">
+  <div class="card-header">
+    Calculadora Financeira
+  </div>
+  <div class="card-body">
+   	<%= form_with id: 'form_calculator',url: "calculating", method: :get, remote: true do |f| %>
+   		<div class="form-row">
+   			<div class="form-group col-md-6">
+				<label> Montante Inicial </label>
+		   		<%= f.text_field :montante_inicial, class: 'form-control', placeholder: "Montante inicial" %>
+		   	</div>
+		  </div>
+		  <div class="form-row">
+        <div class= "form-group col-md-6">
+          <label>Juros anuais </label>
+       		<%= f.text_field :juros_anuais, class: 'form-control', placeholder: "Juros a.a" %>
+          <i>Juros anuais da aplicação. Use "." para decimais</i>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class= "form-group col-md-6">
+          <label>Período de investimento em meses</label>
+          <%= f.text_field :periodo_meses, class: 'form-control', placeholder: "Quantos meses" %>
+           <i>Juros anuais da aplicação. Use "." para decimais</i>
+        </div>
+      </div>
+      <div id = "montante_final"></div>
+      <div class="actions">
+        <%= f.button "Calcular" , class: "btn btn-primary"%>
+      </div>
+
+   	<%end%>
+
+  </div>
+</div>
+</div>
